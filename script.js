@@ -14,7 +14,14 @@ function nextText() {
 }
 
 function develop(){
-    var element = document.getElementById("left-menu");
-
-    element.style = "bold";
+    var menu = document.getElementById("menu-deroulant");
+    var button = document.getElementById("round-button");
+    if (menu.style.left == "0%") {
+        menu.style.left = "-15%";
+        button.style.left = "-25px";
+    }
+    else{
+        menu.style.left = "0%";
+        button.style.left = "10%";
+    }
 }

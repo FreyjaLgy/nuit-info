@@ -9,9 +9,23 @@
     position: absolute; /* Positionnement absolu */
     left: -25px; /* Déplace l'élément à l'extérieur de la zone visible (moitié de la largeur) */
     top: 50%; /* Centre l'élément verticalement */
-    transform: translateY(-50%); /* Ajuste la position verticale */
+    transform: translateY(-50%);
+    transition: left 1s ease;
 }
 
-.toerase{
-    
+.menu-deroulant {
+    width: 15%;
+    height: 100vh;
+    background-color: #3498db;
+    position: fixed;
+    left: -15%;
+    transition: left 1s ease;
+}
+
+/* Styles pour les liens du menu déroulant */
+.menu-deroulant a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
 }
