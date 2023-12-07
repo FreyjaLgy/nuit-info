@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 07 déc. 2023 à 21:54
+-- Généré le : jeu. 07 déc. 2023 à 23:07
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `user` (
   `iduser` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
   `route` smallint(6) DEFAULT NULL,
   `time` time DEFAULT '00:00:00',
   `level_reached` smallint(6) DEFAULT NULL
@@ -40,8 +39,8 @@ CREATE TABLE `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`iduser`, `username`, `password`, `route`, `time`, `level_reached`) VALUES
-(1, 'userTest', 'topSecretPassword', NULL, '00:00:00', NULL);
+INSERT INTO `user` (`iduser`, `username`, `route`, `time`, `level_reached`) VALUES
+(1, 'userTest', NULL, '00:00:00', NULL);
 
 --
 -- Index pour les tables déchargées
