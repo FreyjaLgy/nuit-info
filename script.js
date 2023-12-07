@@ -1,5 +1,11 @@
-var text = ["Malheur ! Vous avez été kidnappé ! \n Mais au vu du son quasi-inexistant produit par le véhicule dans lequel vous avez été chargé,il s'agirait plutôt d'un greennapping... \n Au vu de l'autonomie de ce genre de véhicule, vous savez que vous en aurez pour maximum 1h30... avant le prochain plein."
-, "Text 1", "Text 2", "Text 3", "Text 4"];
+var text = [
+    "Malheur ! Vous avez été kidnappé !",
+    "Mais à entendre le son quasi-inexistant produit par le véhicule dans lequel vous avez été chargé, il s'agirait plutôt d'un greennapping...",
+    "Au vu de l'autonomie de ce genre de véhicule, vous savez que vous en aurez pour maximum 1h30... avant le prochain plein.",
+    "Comme vous allez être ici longtemps, faisons les présentations. Vous êtes Maurice, 64 ans et bourré de rhumatismes.",
+    "Vous alliez tranquillement échouer à obtenir le titre de Champion du Monde de Scrabble quand ce type bizarre au crâne luisant vous a attrapé.",
+    "La seule chose dont vous vous souvenez c'est de vous être réveillé dans le coffre d'une voiure électrique, ligoté de la tête aux pieds. Vous n\'allez pas rester comme ça sans rien faire !",
+];
 var whereText = 0;
 
 function nextText() {
