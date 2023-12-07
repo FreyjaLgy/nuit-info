@@ -2,7 +2,7 @@
     width: 50px; /* Vous pouvez ajuster la largeur et la hauteur selon vos besoins */
     height: 50px;
     border-radius: 50%; /* Utilise un rayon de bordure différent pour créer un demi-cercle */
-    background-color: #3498db; /* Couleur de fond du bouton */
+    background-color: #9cbed4; /* Couleur de fond du bouton */
     color: #fff; /* Couleur du texte du bouton */
     border: none; /* Supprime les bordures */
     cursor: pointer; /* Curseur de souris indiquant une interaction */
