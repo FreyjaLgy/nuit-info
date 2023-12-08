@@ -20,6 +20,7 @@ var text = [
 
 ];
 var whereText=0;
+var clicPorte=0;
 
 function get(name) {
     return document.getElementById(name);
@@ -36,6 +37,7 @@ function point(depth)
 
 function changeImage() {
     var image = get('image');
+    clicPorte++;
     var divBouton = get('divBouton');
     if (image.src.includes("images/LAPORTE.png")) {
         image.src = "images/LAPORTEOUVERTE.png";
@@ -43,6 +45,9 @@ function changeImage() {
     } else {
         image.src = "images/LAPORTE.png";
         divBouton.setAttribute("hidden", "hidden");
+    }
+    if (clicPorte == 20) {
+        alert("A votre âge, le temps est précieux. Ne le gâchez pas à faire des choses inutiles.\n Il est souvent plus facile de baisser les bras face à une échéance qui se rapproche, mais ce n'est pas la solution. \n Vous devez vous BATTRE. Vous devez survivre. \n C\'est comme pour le climat, au fait. Il n'est pas trop tard. Mais il n'est pas trop tôt non plus. \n Pour réessayer, actualisez la page.")
     }
 }
 
