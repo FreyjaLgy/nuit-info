@@ -16,7 +16,7 @@
 .text-box {
     width: 70%;
     display: block;
-    height: 100px; /*sets height of element*/
+    height: 70px; /*sets height of element*/
     background: rgb(255, 255, 255); /*sets the background of this element (here a solid colour)*/
     padding-top: 20px;
     padding-left: 20px; /*sets 'padding'*/

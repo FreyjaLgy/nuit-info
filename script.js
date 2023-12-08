@@ -5,7 +5,7 @@ var text = [
     "Comme vous allez être ici longtemps, faisons les présentations. Vous êtes Maurice, 64 ans et bourré de rhumatismes.",
     "Vous alliez tranquillement échouer à obtenir le titre de Champion du Monde de Scrabble quand ce type bizarre au crâne luisant vous a attrapé.",
     "La seule chose dont vous vous souvenez c'est de vous être réveillé dans le coffre d'une voiure électrique, ligoté de la tête aux pieds. Vous n\'allez pas rester comme ça sans rien faire !",
-    "Le coffre a l'air d'être ouvrable de l'intérieur... Que voulez-vous faire ?"
+    "Le coffre a l'air d'être ouvrable de l'intérieur... Que voulez-vous faire ?",
 ];
 var whereText=0;
 
@@ -26,13 +26,6 @@ function nextText() {
     var nextButton = document.getElementById("next-button");
     
     nextButton.innerHTML="Suivant";
-
-    if (whereText < text.length) {
-        textBox.innerHTML = text[whereText++];
-    } else {
-        textBox.innerHTML = "No more text.";
-    }
-
     if (whereText==7) {
         var bouton1 = document.getElementById("bouton-choix1");
         var bouton2 = document.getElementById("bouton-choix2");
@@ -42,6 +35,12 @@ function nextText() {
         bouton1.style.display="block";
         bouton2.style.display="block";
         nextButton.style.display="none";
+    } else {
+        if (whereText < text.length) {
+            textBox.innerHTML = text[whereText++];
+        } else {
+            textBox.innerHTML = "No more text.";
+        }
     }
 }
 
@@ -66,6 +65,7 @@ function choix1(){
     if (whereText==7) {
         text.push("Vous commencez à tirer sur vos liens. Vous pourriez peut-être les desserrer ainsi...Mais malheureusement, vous êtes vieux.");
         text.push("Après à peu près 35 minutes à souffrir de vos rhumatismes sur un pauvre noeud d'arrêt, la voiture de votre ravisseur marque le sien. Vous entendez des pas autour du véhicule. Vous êtes arrivé.");
+        text.push("Le coffre s'ouvre sur la nuit noire. Le visage de votre greennappeur éclairé par la faible lumière du coffre vous apparaît maintenant clairement. Chauve, le regard malicieux, une barbe grisonnante et des lunettes roses, vous êtes face au sosie parfait de Pascal Obispo.");
         bouton1.style.display="none";
         bouton2.style.display="none";
         nextButton.style.display="block";
@@ -84,7 +84,7 @@ function choix2(){
         bouton2.style.display="none";
         nextButton.innerHTML="Arrêter d'attendre";
         nextButton.style.display="block";
-        whereText=3;
+        whereText=6;
         setTimeout(function() {
             textBox.innerHTML="Vous comprenez bien que ça ne servira à rien, pas vrai ?";
         }, 90000);
