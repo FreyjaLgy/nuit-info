@@ -62,6 +62,7 @@ function nextText() {
             textBox.innerHTML = text[whereText++];
         } else {
             textBox.innerHTML = "No more text.";
+            get('divPorte').removeAttribute("hidden");
         }
     }
 }
