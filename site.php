@@ -10,8 +10,11 @@
 </head>
 
 <?php
+session_start();
 // Inclure le contenu de index.html
 include 'index.html';
+$date = date('h:i:s', time());
+$_SESSION['date'] = $date;
 ?>
 
 <!-- Autres éléments de votre page PHP -->
