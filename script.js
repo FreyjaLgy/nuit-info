@@ -13,10 +13,10 @@ var text = [
     "Il parcourt un dédale de couloirs incompréhensible et vous jette avec une forme surhumaine dans une pièce sombre qu'il referme sur vous. Ses pas s'éloignent peu à peu...",
     "Que voulez-vous faire ?",
     "Vous cherchez dans la pièce à la recherche d'un moyen d'en sortir.",
-    "Vous trouvez une inscription sur un mur :\nLe dérèglement climatique n'est pas une affaire si urgente",
+    "Vous trouvez une inscription sur un mur :\n\"Le dérèglement climatique n'est pas une affaire si urgente.\"",
     "Qu'est-ce que c'est que ce truc ? Le précédent otage était-il devenu fou avant de finir en saucisse ?",
     "Vous regardez autour de vous. La pièce comporte trois issues. L'une d'entre elle est celle par laquelle vous êtes entré, et elle est verrouillée. Quant aux deux autres... elles n'en ont pas l'air... Vous remarquez d'autres inscriptions dessus...",
-    "Quelle porte choisissez-vous ?",
+    "Quelle porte choisissez-vous ? (\"Le dérèglement climatique n'est pas une affaire si urgente.\")",
 
 ];
 var whereText=0;
@@ -53,11 +53,11 @@ function nextText() {
     nextButton.innerHTML="Suivant";
     if (whereText==7) {
         choix1();
-    } else if(whereText==13)
-    {
+    } else if(whereText==13) {
         choix2();
-    }
-     else {
+    } else if(whereText==18) {
+        choix3();
+    } else {
         if (whereText < text.length) {
             textBox.innerHTML = text[whereText++];
         } else {
@@ -161,4 +161,8 @@ function choix2_2() {
     bouton2.style.display="none";
     nextButton.style.display="block";
     textBox.innerHTML = text[whereText++];
+}
+
+function choix3() {
+    // body...
 }
