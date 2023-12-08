@@ -9,9 +9,13 @@ var text = [
 ];
 var whereText=0;
 
+function get(name) {
+    return document.getElementById(name);
+}
+
 function changeImage() {
-    var image = document.getElementById('image');
-    var divBouton = document.getElementById('divBouton');
+    var image = get('image');
+    var divBouton = get('divBouton');
     if (image.src.includes("images/LAPORTE.png")) {
         image.src = "images/LAPORTEOUVERTE.png";
         divBouton.removeAttribute("hidden");
@@ -22,14 +26,14 @@ function changeImage() {
 }
 
 function nextText() {
-    var textBox = document.getElementById("text-box");
-    var nextButton = document.getElementById("next-button");
+    var textBox = get("text-box");
+    var nextButton = get("next-button");
     
     nextButton.innerHTML="Suivant";
     if (whereText==7) {
-        var bouton1 = document.getElementById("bouton-choix1");
-        var bouton2 = document.getElementById("bouton-choix2");
-        var nextButton = document.getElementById("next-button");
+        var bouton1 = get("bouton-choix1");
+        var bouton2 = get("bouton-choix2");
+        var nextButton = get("next-button");
         bouton1.innerHTML = "Tirer sur vos liens";
         bouton2.innerHTML = "Attendre";
         bouton1.style.display="block";
@@ -45,8 +49,8 @@ function nextText() {
 }
 
 function develop(){
-    var menu = document.getElementById("menu-deroulant");
-    var button = document.getElementById("round-button");
+    var menu = get("menu-deroulant");
+    var button = get("round-button");
     if (menu.style.left == "0%") {
         menu.style.left = "-15%";
         button.style.left = "-3%";
@@ -58,10 +62,10 @@ function develop(){
 }
 
 function choix1(){
-    var textBox = document.getElementById("text-box");
-    var bouton1 = document.getElementById("bouton-choix1");
-    var bouton2 = document.getElementById("bouton-choix2");
-    var nextButton = document.getElementById("next-button");
+    var textBox = get("text-box");
+    var bouton1 = get("bouton-choix1");
+    var bouton2 = get("bouton-choix2");
+    var nextButton = get("next-button");
     if (whereText==7) {
         text.push("Vous commencez à tirer sur vos liens. Vous pourriez peut-être les desserrer ainsi...Mais malheureusement, vous êtes vieux.");
         text.push("Après à peu près 35 minutes à souffrir de vos rhumatismes sur un pauvre noeud d'arrêt, la voiture de votre ravisseur marque le sien. Vous entendez des pas autour du véhicule. Vous êtes arrivé.");
@@ -73,17 +77,28 @@ function choix1(){
     }
 }
 
+function point(depth)
+{
+    var textBox = get("text-box");
+    setTimeout(function() {
+            textBox.innerHTML+=".";
+            if(depth > 0) point(depth-1);
+        }, 1000);
+}
+
 function choix2(){
-    var textBox = document.getElementById("text-box");
-    var bouton1 = document.getElementById("bouton-choix1");
-    var bouton2 = document.getElementById("bouton-choix2");
-    var nextButton = document.getElementById("next-button");
+    var textBox = get("text-box");
+    var bouton1 = get("bouton-choix1");
+    var bouton2 = get("bouton-choix2");
+    var nextButton = get("next-button");
     
     if (whereText==7) {
         bouton1.style.display="none";
         bouton2.style.display="none";
         nextButton.innerHTML="Arrêter d'attendre";
         nextButton.style.display="block";
+        textBox.innerHTML="Vous attendez";
+        point(2);
         whereText=6;
         setTimeout(function() {
             textBox.innerHTML="Vous comprenez bien que ça ne servira à rien, pas vrai ?";
