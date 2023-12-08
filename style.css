@@ -7,7 +7,7 @@
     border: none; /* Supprime les bordures */
     cursor: pointer; /* Curseur de souris indiquant une interaction */
     position: absolute; /* Positionnement absolu */
-    left: -25px; /* Déplace l'élément à l'extérieur de la zone visible (moitié de la largeur) */
+    left: -3%; /* Déplace l'élément à l'extérieur de la zone visible (moitié de la largeur) */
     top: 50%; /* Centre l'élément verticalement */
     transform: translateY(-50%);
     transition: left 1s ease;
