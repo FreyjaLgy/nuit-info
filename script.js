@@ -55,9 +55,10 @@ function nextText() {
         choix1();
     } else if(whereText==13) {
         choix2();
-    } else if(whereText==18) {
+    } /*else if(whereText==18) {
         choix3();
-    } else {
+    } */
+    else {
         if (whereText < text.length) {
             textBox.innerHTML = text[whereText++];
         } else {
