@@ -25,10 +25,11 @@ body {
 
 .text-box {
     color: white;
+    font-size: 20px;
     font-family: 'Determination';
     width: 70%;
     display: block;
-    height: 70px; /*sets height of element*/
+    height: 90px; /*sets height of element*/
     background: rgb(0, 0, 0); /*sets the background of this element (here a solid colour)*/
     padding-top: 20px;
     padding-left: 20px; /*sets 'padding'*/
@@ -65,13 +66,17 @@ body {
 }
 
 .btn {
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Determination';
-    padding-inline: 5px;
+    padding-inline: 10px;
     position: absolute;
-    top: 150px;
-    left: 45%;
+    top: 250px;
+    left: 40%;
     cursor: pointer;
     background: black;
     color: white;
+}
+
+footer {
+    background-color: #1b1b1b;
 }
