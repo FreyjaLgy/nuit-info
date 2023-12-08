@@ -9,6 +9,14 @@ var text = [
 ];
 var whereText=0;
 
+function changeImage() {
+    if (document.getElementById("imgClickAndChange").src == "images/LAPORTE.png"){
+        document.getElementById("imgClickAndChange").src = "images/LAPORTEOUVERTE.png";
+    } else {
+        document.getElementById("imgClickAndChange").src = "images/LAPORTE.png";
+    }
+}
+
 function nextText() {
     var textBox = document.getElementById("text-box");
     var nextButton = document.getElementById("next-button");

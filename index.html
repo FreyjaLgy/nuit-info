@@ -1,12 +1,21 @@
 <body>
-    <script type="text/javascript" src="script.js"></script>
-
     <div id="menu-deroulant" class="menu-deroulant">
         <a href="">PORTE</a>
         <a href="">Bibliotheque Climat</a>
         <a href="">Minecraft</a>
     </div>
+    <img src="images/LAPORTE.png" id="image" class="center" onclick="changeImage()" height="300px" />
     
+    <script>
+    function changeImage() {
+        var image = document.getElementById('image');
+        if (image.src.includes("images/LAPORTE.png")) {
+            image.src = "images/LAPORTEOUVERTE.png";
+        } else {
+            image.src = "images/LAPORTE.png";
+        }
+    }
+    </script>
     <div id="round-button" class="round-button" onclick="develop()"></div>
     <div id="text-box" class="text-box">
         
