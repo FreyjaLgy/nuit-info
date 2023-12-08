@@ -171,5 +171,21 @@ function choix2_2() {
 }
 
 function choix3() {
-    // body...
+    var bouton1 = get("bouton-choix1");
+    var bouton2 = get("bouton-choix2");
+    var nextButton = get("next-button");
+    bouton1.innerHTML = "Si ! Il ne faut pas attendre !";
+    bouton2.innerHTML = "Il n'y a pas à s'affoler, la science résoudra le problème, comme toujours...";
+    bouton1.style.display="block";
+    bouton2.style.display="block";
+    nextButton.style.display="none";
+    bouton1.onclick = choix3_1;
+    bouton2.onclick = choix3_2;
+}
+
+function choix3_1() {
+    
+}
+function choix3_2() {
+    
 }
