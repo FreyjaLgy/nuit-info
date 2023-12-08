@@ -9,10 +9,14 @@ var text = [
 var whereText = 0;
 
 function changeImage() {
-    if (document.getElementById("imgClickAndChange").src == "images/LAPORTE.png"){
-        document.getElementById("imgClickAndChange").src = "images/LAPORTEOUVERTE.png";
+    var image = document.getElementById('image');
+    var divBouton = document.getElementById('divBouton');
+    if (image.src.includes("images/LAPORTE.png")) {
+        image.src = "images/LAPORTEOUVERTE.png";
+        divBouton.removeAttribute("hidden");
     } else {
-        document.getElementById("imgClickAndChange").src = "images/LAPORTE.png";
+        image.src = "images/LAPORTE.png";
+        divBouton.setAttribute("hidden", "hidden");
     }
 }
 
